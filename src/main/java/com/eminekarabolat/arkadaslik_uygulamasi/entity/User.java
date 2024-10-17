@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "tbl_user")
+
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,4 +20,16 @@ public class User {
 	String name;
 	String avatar;
 	Gender gender;
+	@Column(length = 64, unique = true)
+	String userName;
+	String password;
+	String email;
+	String phone;
+	String address;
+	Integer age;
+	Integer weight;
+	Integer height;
+	Integer followerCount;
+	Integer followingCount;
+	Boolean isActive;
 }
